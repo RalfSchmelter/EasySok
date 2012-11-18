@@ -13,7 +13,7 @@ import android.graphics.Point;
  * This class represents a sokoban map.
  *
  * Note that there exists two version of most functions.
- * One taking a point (x-, y-values) and one an index (x + y * width()).
+ * One taking a x and y values and one an index (x + y * getWidth()).
  *
  * The height and width of the map must be smaller than 128.
  */
@@ -334,6 +334,142 @@ public class Map {
     }
     
     /**
+     * Returns <code>true</code>, if the map is valid.
+     */
+    public boolean isValid() {
+        return validity() == IS_VALID;
+    }
+
+    /**
+     * Returns the validity of the map.
+     *
+     * You should call this after creation of the map, when you can not be sure if the map
+     * is valid.
+     */
+    public int validity() {
+        if (validity_valid) {
+            return validity;
+        }
+
+        validity = IS_VALID;
+        int keepers = 0;
+        int goals = 0;
+        int gems = 0;
+
+        for (int i = 0; i < size; ++i) {
+            int piece = getPiece(i);
+
+            if (pieceContainsKeeper(piece)) {
+                ++keepers;
+            }
+
+            if (pieceContainsGem(piece)) {
+                ++gems;
+            }
+
+            if (pieceContainsGoal(piece)) {
+                ++goals;
+            }
+        }
+
+        if (keepers < 1) {
+            validity =  NO_KEEPER;
+        }
+        else if (keepers > 1) {
+            validity = TOO_MANY_KEEPERS;
+        }
+
+        if (gems < 1) {
+            validity = NO_GEMS;
+        }
+
+        if (goals < gems) {
+            validity = MORE_GEMS_THAN_GOALS;
+        }
+        else if (goals > gems) {
+            validity = MORE_GOALS_THAN_GEMS;
+        }
+
+        if (validity != IS_VALID) {
+            return validity;
+        }
+
+        for (int i = 0; i < size; ++i) {
+            if (getPiece(i) == OUTSIDE) {
+                for (int j = 0; j < 4; ++j) {
+                    int nb_index = i + xy_offsets[j];
+
+                    // It doesn't matter if we cross the sides of the map!
+                    if (isValidIndex(nb_index)) {
+                        int piece = getPiece(nb_index);
+
+                        if ((piece != OUTSIDE) && (piece != WALL)) {
+                            validity = MAP_LEAKS;
+
+                            return validity;
+                        }
+                    }
+                }
+            }
+        }
+
+        for (int x = 0; x < width; ++x) {
+            int piece1 = getPiece(x, 0);
+            int piece2 = getPiece(x, height - 1);
+
+            if ((piece1 != OUTSIDE) && (piece1 != WALL)) {
+                validity = MAP_LEAKS;
+
+                return validity;
+            }
+
+            if ((piece2 != OUTSIDE) && (piece2 != WALL)) {
+                validity = MAP_LEAKS;
+
+                return validity;
+            }
+        }
+
+        for (int y = 0; y < height; ++y) {
+            int piece1 = getPiece(0, y);
+            int piece2 = getPiece(width - 1, y);
+
+            if ((piece1 != OUTSIDE) && (piece1 != WALL)) {
+                validity = MAP_LEAKS;
+
+                return validity;
+            }
+
+            if ((piece2 != OUTSIDE) && (piece2 != WALL)) {
+                validity = MAP_LEAKS;
+
+                return validity;
+            }
+        }
+
+        if (isSolved()) {
+            validity = MAP_SOLVED;
+
+            return validity;
+        }
+
+        validity = IS_VALID;
+
+        return validity;
+    }
+    
+    /**
+     * Returns the piece at the given position.
+     * 
+     * @param x The x-coordinate.
+     * @param y The y-coordinate.
+     * @return The piece.
+     */
+    public int getPiece(int x, int y) {
+        return pieces[x + y * width] & PIECE;
+    }
+    
+    /**
      * Returns the piece at the given index.
      * 
      * @param index The index.
@@ -462,5 +598,54 @@ public class Map {
      */
     private static boolean isMapLine(String line) {
         return map_regexp.reset(line).find();
+    }
+
+    /**
+     * Returns <code>true</code> if the index is valid.
+     * 
+     * @param index The index.
+     * @return <code>true</code> if the index is valid.
+     */
+    public boolean isValidIndex(int index) {
+        return (index >= 0) && (index < size);
+    }
+    
+    /**
+     * Returns <code>true</code> if the map is solved.
+     * 
+     * @return <code>true</code> if the map is solved.
+     */
+    public boolean isSolved() {
+        return numberOfEmptyGoals() == 0;
+    }
+    
+    /**
+     * Returns the number of empty goals.
+     * 
+     * @return the number of empty goals.
+     */
+    public int numberOfEmptyGoals() {
+        if (!empty_goals_valid) {
+            setupNumberOfEmptyGoals();
+        }
+
+        return empty_goals;
+    }
+    
+    /**
+     * Sets up the number of empty goals.
+     */
+    private void setupNumberOfEmptyGoals() {
+        empty_goals = 0;
+
+        for (int i = 0; i < size; ++i) {
+            int piece = getPiece(i);
+
+            if (pieceContainsGoal(piece) && !pieceContainsGem(piece)) {
+                ++empty_goals;
+            }
+        }
+
+        empty_goals_valid = true;
     }
 }
