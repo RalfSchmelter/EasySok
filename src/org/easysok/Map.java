@@ -1,5 +1,6 @@
 package org.easysok;
 
+import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -323,7 +324,7 @@ public class Map {
     public int getWith() {
         return width;
     }
-    
+
     /**
      * Returns the height of the map.
      * 
@@ -332,7 +333,7 @@ public class Map {
     public int getHeight() {
         return height;
     }
-    
+
     /**
      * Returns <code>true</code>, if the map is valid.
      */
@@ -457,7 +458,7 @@ public class Map {
 
         return validity;
     }
-    
+
     /**
      * Returns the piece at the given position.
      * 
@@ -468,7 +469,7 @@ public class Map {
     public int getPiece(int x, int y) {
         return pieces[x + y * width] & PIECE;
     }
-    
+
     /**
      * Returns the piece at the given index.
      * 
@@ -609,7 +610,7 @@ public class Map {
     public boolean isValidIndex(int index) {
         return (index >= 0) && (index < size);
     }
-    
+
     /**
      * Returns <code>true</code> if the map is solved.
      * 
@@ -618,7 +619,7 @@ public class Map {
     public boolean isSolved() {
         return numberOfEmptyGoals() == 0;
     }
-    
+
     /**
      * Returns the number of empty goals.
      * 
@@ -631,7 +632,7 @@ public class Map {
 
         return empty_goals;
     }
-    
+
     /**
      * Sets up the number of empty goals.
      */
@@ -647,5 +648,22 @@ public class Map {
         }
 
         empty_goals_valid = true;
+    }
+    
+    /**
+     * Returns the map in xsb format.
+     */
+    public String toString() {
+        StringBuilder result = new StringBuilder();
+        
+        for (int y = 0; y < height; ++y) {
+            for (int x = 0; x < width; ++x) {
+                result.append(piece_to_text[getPiece(x, y)]);
+            }
+            
+            result.append('\n');
+        }
+        
+        return result.toString();
     }
 }
