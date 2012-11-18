@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.util.ArrayList;
 import java.util.LinkedList;
 
 import android.app.Activity;
@@ -19,7 +20,7 @@ public class MainActivity extends Activity {
         LinkedList<String> lines = new LinkedList<String>();
         
         try {
-            InputStream is = getAssets().open("microban.xsb");
+            InputStream is = getAssets().open("dh1.xsb");
             BufferedReader reader = new BufferedReader(new InputStreamReader(is));
             
             while (true) {
@@ -37,13 +38,13 @@ public class MainActivity extends Activity {
             e.printStackTrace();
         }
 
-        Map map;
+        Level level;
         
         while (true) {
-            map = new Map(lines);
+            level = new Level(lines, new ArrayList<String>(), new ArrayList<String>(), "", "", "", "", -1);
             
-            if (map.isValid()) {
-                System.out.println(map);
+            if (level.getMap().isValid()) {
+                System.out.println(level);
             }
             else {
                 break;

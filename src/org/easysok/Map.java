@@ -597,7 +597,7 @@ public class Map {
      * @param line The line.
      * @return <code>true</code> if it as map line.
      */
-    private static boolean isMapLine(String line) {
+    public static boolean isMapLine(String line) {
         return map_regexp.reset(line).find();
     }
 
