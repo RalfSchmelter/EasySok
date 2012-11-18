@@ -1,0 +1,243 @@
+<!DOCTYPE EasySokTheme SYSTEM "easysoktheme.dtd">
+
+<EasySokTheme name="Space" leftborder="-0.8" rightborder="-0.8" upperborder="-0.8" lowerborder="-0.8"
+	      image="@drawable/space_theme_background.png">
+	<KeeperOnFloor>
+		<PieceImageAlternates>
+			<PieceImage size="80">
+				<Layer image="@drawable/space_keeper.png" />
+			</PieceImage>
+		</PieceImageAlternates>
+	</KeeperOnFloor>
+	<KeeperOnDeadFloor>
+		<PieceImageAlternates>
+			<PieceImage size="80">
+				<Layer image="@drawable/space_dead_keeper.png" />
+			</PieceImage>
+		</PieceImageAlternates>
+	</KeeperOnDeadFloor>
+	<KeeperOnGoal>
+		<PieceImageAlternates>
+			<PieceImage size="80">
+				<Layer image="@drawable/space_keeper_on_goal.png" />
+			</PieceImage>
+		</PieceImageAlternates>
+	</KeeperOnGoal>
+	<MovingKeeper>
+		<PieceImageAlternates>
+			<PieceImage size="80">
+				<Layer image="@drawable/space_only_keeper.png" />
+			</PieceImage>
+		</PieceImageAlternates>
+	</MovingKeeper>
+	<VirtualKeeper>
+		<PieceImageAlternates>
+			<PieceImage size="80">
+				<Layer image="@drawable/space_virtual_keeper.png" />
+			</PieceImage>
+		</PieceImageAlternates>
+	</VirtualKeeper>
+	<GemOnFloor>
+		<PieceImageAlternates>
+			<PieceImage size="80">
+				<Layer image="@drawable/space_gem.png" />
+			</PieceImage>
+		</PieceImageAlternates>
+	</GemOnFloor>
+	<GemOnDeadFloor>
+		<PieceImageAlternates>
+			<PieceImage size="80">
+				<Layer image="@drawable/space_dead_gem.png" />
+			</PieceImage>
+		</PieceImageAlternates>
+	</GemOnDeadFloor>
+	<GemOnGoal>
+		<PieceImageAlternates>
+			<PieceImage size="80">
+				<Layer image="@drawable/space_gem_on_goal.png" />
+			</PieceImage>
+		</PieceImageAlternates>
+	</GemOnGoal>
+	<MovingGem>
+		<PieceImageAlternates>
+			<PieceImage size="80">
+				<Layer image="@drawable/space_only_gem.png" />
+			</PieceImage>
+		</PieceImageAlternates>
+	</MovingGem>
+	<Floor>
+		<PieceImageAlternates>
+			<PieceImage size="80">
+				<Layer image="@drawable/space_floor.png" />
+			</PieceImage>
+		</PieceImageAlternates>
+	</Floor>
+	<DeadFloor>
+		<PieceImageAlternates>
+			<PieceImage size="80">
+				<Layer image="@drawable/space_dead_floor.png" />
+			</PieceImage>
+		</PieceImageAlternates>
+	</DeadFloor>
+	<Goal>
+		<PieceImageAlternates>
+			<PieceImage size="80">
+				<Layer image="@drawable/space_goal.png" />
+			</PieceImage>
+		</PieceImageAlternates>
+	</Goal>
+	<LeftArrow>
+		<PieceImageAlternates>
+			<PieceImage size="80">
+				<Layer image="@drawable/space_arrow.png">
+					<Effect>
+						<RotateLeft />
+					</Effect>
+				</Layer>
+			</PieceImage>		
+		</PieceImageAlternates>
+	</LeftArrow>
+	<RightArrow>
+		<PieceImageAlternates>
+			<PieceImage size="80">
+				<Layer image="@drawable/space_arrow.png">
+					<Effect>
+						<RotateLeft />
+						<HMirror />
+					</Effect>
+				</Layer>
+			</PieceImage>		
+		</PieceImageAlternates>
+	</RightArrow>
+	<UpArrow>
+		<PieceImageAlternates>
+			<PieceImage size="80">
+				<Layer image="@drawable/space_arrow.png" />
+			</PieceImage>		
+		</PieceImageAlternates>
+	</UpArrow>
+	<DownArrow>
+		<PieceImageAlternates>
+			<PieceImage size="80">
+				<Layer image="@drawable/space_arrow.png">
+					<Effect>
+						<VMirror />
+					</Effect>
+				</Layer>
+			</PieceImage>		
+		</PieceImageAlternates>
+	</DownArrow>
+	<Wall>
+		<WallPieceAlternates left="noninside" lowerleft="inside" lower="noninside">
+			<PieceImage size="80">
+				<Layer image="@drawable/space_corner1.png" />
+			</PieceImage>
+		</WallPieceAlternates>
+		<WallPieceAlternates  upperleft="inside" upper="noninside" left="noninside">
+			<PieceImage size="80">
+				<Layer image="@drawable/space_corner2.png" />
+			</PieceImage>
+		</WallPieceAlternates>
+		<WallPieceAlternates upper="noninside" upperright="inside" right="noninside">
+			<PieceImage size="80">
+				<Layer image="@drawable/space_corner3.png" />
+			</PieceImage>
+		</WallPieceAlternates>
+		<WallPieceAlternates right="noninside" lowerright="inside" lower="noninside">
+			<PieceImage size="80">
+				<Layer image="@drawable/space_corner4.png" />
+			</PieceImage>
+		</WallPieceAlternates>
+		<WallPieceAlternates left="noninside" right="noninside" lower="inside">
+			<PieceImage size="80">
+				<Layer image="@drawable/space_line4.png" />
+			</PieceImage>
+		</WallPieceAlternates>
+		<WallPieceAlternates upper="noninside" left="inside" lower="noninside">
+			<PieceImage size="80">
+				<Layer image="@drawable/space_line3.png" />
+			</PieceImage>
+		</WallPieceAlternates>
+		<WallPieceAlternates upper="inside" left="noninside" right="noninside">
+			<PieceImage size="80">
+				<Layer image="@drawable/space_line2.png" />
+			</PieceImage>
+		</WallPieceAlternates>
+		<WallPieceAlternates upper="noninside" right="inside" lower="noninside">
+			<PieceImage size="80">
+				<Layer image="@drawable/space_line1.png" />
+			</PieceImage>
+		</WallPieceAlternates>
+		<WallPieceAlternates upper="noninside" left="inside" right="noninside" lower="inside">
+			<PieceImage size="80">
+				<Layer image="@drawable/space_twoline4.png" />
+			</PieceImage>
+		</WallPieceAlternates>
+		<WallPieceAlternates upper="inside" left="inside" right="noninside" lower="noninside">
+			<PieceImage size="80">
+				<Layer image="@drawable/space_twoline1.png" />
+			</PieceImage>
+		</WallPieceAlternates>
+		<WallPieceAlternates upper="inside" left="noninside" right="inside" lower="noninside">
+			<PieceImage size="80">
+				<Layer image="@drawable/space_twoline2.png" />
+			</PieceImage>
+		</WallPieceAlternates>
+		<WallPieceAlternates upper="noninside" left="noninside" right="inside" lower="inside">
+			<PieceImage size="80">
+				<Layer image="@drawable/space_twoline3.png" />
+			</PieceImage>
+		</WallPieceAlternates>
+		<WallPieceAlternates upper="inside" left="inside" right="noninside" lower="inside">
+			<PieceImage size="80">
+				<Layer image="@drawable/space_threeline4.png" />
+			</PieceImage>
+		</WallPieceAlternates>
+		<WallPieceAlternates upper="inside" left="inside" right="inside" lower="noninside">
+			<PieceImage size="80">
+				<Layer image="@drawable/space_threeline1.png" />
+			</PieceImage>
+		</WallPieceAlternates>
+		<WallPieceAlternates upper="inside" left="noninside" right="inside" lower="inside">
+			<PieceImage size="80">
+				<Layer image="@drawable/space_threeline2.png" />
+			</PieceImage>
+		</WallPieceAlternates>
+		<WallPieceAlternates upper="noninside" left="inside" right="inside" lower="inside">
+			<PieceImage size="80">
+				<Layer image="@drawable/space_threeline3.png" />
+			</PieceImage>
+		</WallPieceAlternates>
+		<WallPieceAlternates upper="inside" left="inside" right="inside" lower="inside">
+			<PieceImage size="80">
+				<Layer image="@drawable/space_fourline.png">
+					<Effect>
+						<RotateLeft />
+					</Effect>
+				</Layer>
+			</PieceImage>
+		</WallPieceAlternates>
+	</Wall>
+	<Outside>
+		<WallPieceAlternates left="noninside" lowerleft="inside" lower="noninside">
+			<PieceImage size="80">
+				<Layer image="@drawable/space_corner1.png" />
+			</PieceImage>
+		</WallPieceAlternates>
+		<WallPieceAlternates  upperleft="inside" upper="noninside" left="noninside">
+			<PieceImage size="80">
+				<Layer image="@drawable/space_corner2.png" />
+			</PieceImage>
+		</WallPieceAlternates>
+		<WallPieceAlternates upper="noninside" upperright="inside" right="noninside">
+			<PieceImage size="80">
+				<Layer image="@drawable/space_corner3.png" />
+			</PieceImage>
+		</WallPieceAlternates>
+		<WallPieceAlternates right="noninside" lowerright="inside" lower="noninside">
+			<PieceImage size="80">
+				<Layer image="@drawable/space_corner4.png" />
+			</PieceImage>
+		</WallPieceAlternates>
+	</Outside>
+</EasySokTheme>

@@ -1,0 +1,117 @@
+<!DOCTYPE EasySokTheme SYSTEM "easysoktheme.dtd">
+
+<EasySokTheme name="Text" red="255" green="255" blue="255">
+	<KeeperOnFloor>
+		<PieceImageAlternates>
+			<PieceImage size="128">
+				<Layer image="@drawable/text_keeper.png" />
+			</PieceImage>
+		</PieceImageAlternates>
+	</KeeperOnFloor>
+	<KeeperOnDeadFloor>
+		<PieceImageAlternates>
+			<PieceImage size="128">
+				<Layer image="@drawable/text_keeper.png" />
+			</PieceImage>
+		</PieceImageAlternates>
+	</KeeperOnDeadFloor>
+	<KeeperOnGoal>
+		<PieceImageAlternates>
+			<PieceImage size="128">
+				<Layer image="@drawable/text_keeper_on_goal.png" />
+			</PieceImage>
+		</PieceImageAlternates>
+	</KeeperOnGoal>
+	<MovingKeeper>
+		<PieceImageAlternates>
+			<PieceImage size="128">
+				<Layer image="@drawable/text_keeper.png" />
+			</PieceImage>
+		</PieceImageAlternates>
+	</MovingKeeper>
+	<VirtualKeeper>
+		<PieceImageAlternates>
+			<PieceImage size="128">
+				<Layer image="@drawable/text_virtual_keeper.png" />
+			</PieceImage>
+		</PieceImageAlternates>
+	</VirtualKeeper>
+	<GemOnFloor>
+		<PieceImageAlternates>
+			<PieceImage size="128">
+				<Layer image="@drawable/text_gem.png" />
+			</PieceImage>
+		</PieceImageAlternates>
+	</GemOnFloor>
+	<GemOnDeadFloor>
+		<PieceImageAlternates>
+			<PieceImage size="128">
+				<Layer image="@drawable/text_gem.png" />
+			</PieceImage>
+		</PieceImageAlternates>
+	</GemOnDeadFloor>
+	<GemOnGoal>
+		<PieceImageAlternates>
+			<PieceImage size="128">
+				<Layer image="@drawable/text_gem_on_goal.png" />
+			</PieceImage>
+		</PieceImageAlternates>
+	</GemOnGoal>
+	<MovingGem>
+		<PieceImageAlternates>
+			<PieceImage size="128">
+				<Layer image="@drawable/text_gem.png" />
+			</PieceImage>
+		</PieceImageAlternates>
+	</MovingGem>
+	<Floor>
+		<PieceImageAlternates>
+			<PieceImage size="128" />
+		</PieceImageAlternates>
+	</Floor>
+	<DeadFloor>
+		<PieceImageAlternates>
+			<PieceImage size="128" />
+		</PieceImageAlternates>
+	</DeadFloor>
+	<Goal>
+		<PieceImageAlternates>
+			<PieceImage size="128">
+				<Layer image="@drawable/text_goal.png" />
+			</PieceImage>
+		</PieceImageAlternates>
+	</Goal>
+	<LeftArrow>
+		<PieceImageAlternates>
+			<PieceImage size="128">
+			</PieceImage>		
+		</PieceImageAlternates>
+	</LeftArrow>
+	<RightArrow>
+		<PieceImageAlternates>
+			<PieceImage size="128">
+			</PieceImage>		
+		</PieceImageAlternates>
+	</RightArrow>
+	<UpArrow>
+		<PieceImageAlternates>
+			<PieceImage size="128">
+			</PieceImage>		
+		</PieceImageAlternates>
+	</UpArrow>
+	<DownArrow>
+		<PieceImageAlternates>
+			<PieceImage size="128">
+			</PieceImage>		
+		</PieceImageAlternates>
+	</DownArrow>
+	<Wall>
+		<WallPieceAlternates>
+			<PieceImage size="128">
+				<Layer image="@drawable/text_wall.png" />
+			</PieceImage>
+		</WallPieceAlternates>
+	</Wall>
+	<Outside>
+	</Outside>
+</EasySokTheme>

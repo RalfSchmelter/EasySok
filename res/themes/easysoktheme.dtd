@@ -1,0 +1,201 @@
+<!ELEMENT EasySokTheme ( ( KeeperOnFloor | ( LeftKeeperOnFloor, RightKeeperOnFloor, UpKeeperOnFloor, 
+					     DownKeeperOnFloor ) ),
+			  ( KeeperOnDeadFloor | ( LeftKeeperOnDeadFloor, RightKeeperOnDeadFloor, 
+						  UpKeeperOnDeadFloor, DownKeeperOnDeadFloor ) ),
+ 			  ( KeeperOnGoal | ( LeftKeeperOnGoal, RightKeeperOnGoal, UpKeeperOnGoal,
+					     DownKeeperOnGoal ) ),
+			  ( MovingKeeper | ( LeftMovingKeeper, RightMovingKeeper, UpMovingKeeper,
+					     DownMovingKeeper ) ),
+			  ( VirtualKeeper | ( LeftVirtualKeeper, RightVirtualKeeper, UpVirtualKeeper,
+					      DownVirtualKeeper) ),
+			GemOnFloor, GemOnDeadFloor, GemOnGoal, MovingGem, Floor, DeadFloor, Goal,
+			LeftArrow, RightArrow, UpArrow, DownArrow, Wall, Outside) >
+<!ATTLIST EasySokTheme
+  name CDATA #REQUIRED
+  leftborder CDATA #IMPLIED
+  rightborder CDATA #IMPLIED
+  upperborder CDATA #IMPLIED
+  lowerborder CDATA #IMPLIED
+  red CDATA #IMPLIED
+  green CDATA #IMPLIED
+  blue CDATA #IMPLIED
+  alpha CDATA #IMPLIED
+  image CDATA #IMPLIED
+>
+
+<!ELEMENT KeeperOnFloor PieceImageAlternates* >
+
+<!ELEMENT LeftKeeperOnFloor PieceImageAlternates* >
+
+<!ELEMENT RightKeeperOnFloor PieceImageAlternates* >
+
+<!ELEMENT UpKeeperOnFloor PieceImageAlternates* >
+
+<!ELEMENT DownKeeperOnFloor PieceImageAlternates* >
+
+<!ELEMENT KeeperOnDeadFloor PieceImageAlternates* >
+
+<!ELEMENT LeftKeeperOnDeadFloor PieceImageAlternates* >
+
+<!ELEMENT RightKeeperOnDeadFloor PieceImageAlternates* >
+
+<!ELEMENT UpKeeperOnDeadFloor PieceImageAlternates* >
+
+<!ELEMENT DownKeeperOnDeadFloor PieceImageAlternates* >
+
+<!ELEMENT KeeperOnGoal PieceImageAlternates* >
+
+<!ELEMENT LeftKeeperOnGoal PieceImageAlternates* >
+
+<!ELEMENT RightKeeperOnGoal PieceImageAlternates* >
+
+<!ELEMENT UpKeeperOnGoal PieceImageAlternates* >
+
+<!ELEMENT DownKeeperOnGoal PieceImageAlternates* >
+
+<!ELEMENT MovingKeeper PieceImageAlternates* >
+
+<!ELEMENT LeftMovingKeeper PieceImageAlternates* >
+
+<!ELEMENT RightMovingKeeper PieceImageAlternates* >
+
+<!ELEMENT UpMovingKeeper PieceImageAlternates* >
+
+<!ELEMENT DownMovingKeeper PieceImageAlternates* >
+
+<!ELEMENT VirtualKeeper PieceImageAlternates >
+
+<!ELEMENT LeftVirtualKeeper PieceImageAlternates >
+
+<!ELEMENT RightVirtualKeeper PieceImageAlternates >
+
+<!ELEMENT UpVirtualKeeper PieceImageAlternates >
+
+<!ELEMENT DownVirtualKeeper PieceImageAlternates >
+
+<!ELEMENT GemOnFloor PieceImageAlternates >
+
+<!ELEMENT GemOnDeadFloor PieceImageAlternates >
+
+<!ELEMENT GemOnGoal PieceImageAlternates >
+
+<!ELEMENT MovingGem PieceImageAlternates >
+
+<!ELEMENT Floor PieceImageAlternates >
+
+<!ELEMENT DeadFloor PieceImageAlternates >
+
+<!ELEMENT Goal PieceImageAlternates >
+
+<!ELEMENT LeftArrow PieceImageAlternates* >
+
+<!ELEMENT RightArrow PieceImageAlternates* >
+
+<!ELEMENT UpArrow PieceImageAlternates* >
+
+<!ELEMENT DownArrow PieceImageAlternates* >
+
+<!ELEMENT Wall ( WallPieceAlternates* ) >
+
+<!ELEMENT Outside ( WallPieceAlternates* ) >
+
+
+<!ELEMENT PieceImage ( Effect?, Layer* ) >
+<!ATTLIST PieceImage
+  size CDATA #REQUIRED
+  xoffset CDATA #IMPLIED
+  yoffset CDATA #IMPLIED
+>
+
+<!ELEMENT Effect ( ( Move | RotateLeft | RotateRight | UTurn | HMirror | VMirror |
+		     BlendRgb | BlendRgba | BlendAlpha | Colorize | Scale | Crop )* ) >
+
+<!ELEMENT RotateLeft EMPTY>
+
+<!ELEMENT RotateRight EMPTY>
+
+<!ELEMENT UTurn EMPTY>
+
+<!ELEMENT Move EMPTY>
+<!ATTLIST Move
+  xoffset CDATA #REQUIRED
+  yoffset CDATA #REQUIRED
+>
+
+<!ELEMENT BlendRgb EMPTY >
+<!ATTLIST BlendRgb
+  factor CDATA #REQUIRED
+  red CDATA #IMPLIED
+  green CDATA #IMPLIED
+  blue CDATA #IMPLIED
+>
+
+<!ELEMENT BlendRgba EMPTY >
+<!ATTLIST BlendRgba
+  factor CDATA #REQUIRED
+  red CDATA #IMPLIED
+  green CDATA #IMPLIED
+  blue CDATA #IMPLIED
+  alpha CDATA #IMPLIED
+>
+
+<!ELEMENT BlendAlpha EMPTY >
+<!ATTLIST BlendAlpha
+  factor CDATA #REQUIRED
+  alpha CDATA #IMPLIED
+>
+
+<!ELEMENT Colorize EMPTY >
+<!ATTLIST Colorize
+  factor CDATA #REQUIRED
+  red CDATA #IMPLIED
+  green CDATA #IMPLIED
+  blue CDATA #IMPLIED
+  alpha CDATA #IMPLIED
+>
+
+<!ELEMENT Scale EMPTY>
+<!ATTLIST Scale
+  width CDATA #REQUIRED
+  height CDATA #REQUIRED
+>
+
+<!ELEMENT Crop EMPTY>
+<!ATTLIST Crop
+  xoffset CDATA #IMPLIED
+  yoffset CDATA #IMPLIED
+  width CDATA #REQUIRED
+  height CDATA #REQUIRED
+>
+
+<!ELEMENT Layer ( Effect? ) >
+<!ATTLIST Layer
+  red CDATA #IMPLIED
+  green CDATA #IMPLIED
+  blue CDATA #IMPLIED
+  alpha CDATA #IMPLIED
+  image CDATA #IMPLIED
+>
+<!ELEMENT PieceImageAlternates PieceImage+>
+<!ATTLIST PieceImageAlternates
+  upperleft (floor|goal|wall|nonfloor|nongoal|nonwall|all) "all"
+  upper (floor|goal|wall|nonfloor|nongoal|nonwall|all) "all"
+  upperright (floor|goal|wall|nonfloor|nongoal|nonwall|all) "all"
+  left (floor|goal|wall|nonfloor|nongoal|nonwall|all) "all"
+  right (floor|goal|wall|nonfloor|nongoal|nonwall|all) "all"
+  lowerleft (floor|goal|wall|nonfloor|nongoal|nonwall|all) "all"
+  lower (floor|goal|wall|nonfloor|nongoal|nonwall|all) "all"
+  lowerright (floor|goal|wall|nonfloor|nongoal|nonwall|all) "all"
+>
+
+<!ELEMENT WallPieceAlternates PieceImage+>
+<!ATTLIST WallPieceAlternates
+  upperleft (inside|outside|wall|noninside|nonoutside|nonwall|all) "all"
+  upper (inside|outside|wall|noninside|nonoutside|nonwall|all) "all"
+  upperright (inside|outside|wall|noninside|nonoutside|nonwall|all) "all"
+  left (inside|outside|wall|noninside|nonoutside|nonwall|all) "all"
+  right (inside|outside|wall|noninside|nonoutside|nonwall|all) "all"
+  lowerleft (inside|outside|wall|noninside|nonoutside|nonwall|all) "all"
+  lower (inside|outside|wall|noninside|nonoutside|nonwall|all) "all"
+  lowerright (inside|outside|wall|noninside|nonoutside|nonwall|all) "all"
+>

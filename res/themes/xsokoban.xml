@@ -1,0 +1,278 @@
+<!DOCTYPE EasySokTheme SYSTEM "easysoktheme.dtd" [
+
+<!ENTITY ArrowColor '<Colorize red="128" green="128" blue="224" factor="1.0" />'>
+<!ENTITY WallColor '<Colorize red="192" green="128" blue="96" factor="1.0" />'>
+
+]>
+
+<EasySokTheme name="XSokoban" red="102" green="102" blue="102">
+	<KeeperOnFloor>
+		<PieceImageAlternates>
+			<PieceImage size="96">
+				<Layer image="@drawable/xsokoban_keeper.png" />
+			</PieceImage>
+		</PieceImageAlternates>
+	</KeeperOnFloor>
+	<KeeperOnDeadFloor>
+		<PieceImageAlternates>
+			<PieceImage size="96">
+				<Layer image="@drawable/xsokoban_keeper_on_dead.png" />
+			</PieceImage>
+		</PieceImageAlternates>
+	</KeeperOnDeadFloor>
+	<KeeperOnGoal>
+		<PieceImageAlternates>
+			<PieceImage size="96">
+				<Layer image="@drawable/xsokoban_keeper_on_goal.png" />
+			</PieceImage>
+		</PieceImageAlternates>
+	</KeeperOnGoal>
+	<MovingKeeper>
+		<PieceImageAlternates>
+			<PieceImage size="96">
+				<Layer image="@drawable/xsokoban_moving_keeper.png" />
+			</PieceImage>
+		</PieceImageAlternates>
+	</MovingKeeper>
+	<VirtualKeeper>
+		<PieceImageAlternates>
+			<PieceImage size="96">
+				<Layer image="@drawable/xsokoban_moving_keeper.png">
+					<Effect>
+						<BlendRgb factor="0.3" />
+					</Effect>
+				</Layer>
+			</PieceImage>
+		</PieceImageAlternates>
+	</VirtualKeeper>
+	<GemOnFloor>
+		<PieceImageAlternates>
+			<PieceImage size="96">
+				<Layer image="@drawable/xsokoban_gem.png" />
+			</PieceImage>
+		</PieceImageAlternates>
+	</GemOnFloor>
+	<GemOnDeadFloor>
+		<PieceImageAlternates>
+			<PieceImage size="96">
+				<Layer image="@drawable/xsokoban_gem_on_dead.png" />
+			</PieceImage>
+		</PieceImageAlternates>
+	</GemOnDeadFloor>
+	<GemOnGoal>
+		<PieceImageAlternates>
+			<PieceImage size="96">
+				<Layer image="@drawable/xsokoban_gem_on_goal.png" />
+			</PieceImage>
+		</PieceImageAlternates>
+	</GemOnGoal>
+	<MovingGem>
+		<PieceImageAlternates>
+			<PieceImage size="96">
+				<Layer image="@drawable/xsokoban_moving_gem.png" />
+			</PieceImage>
+		</PieceImageAlternates>
+	</MovingGem>
+	<Floor>
+		<PieceImageAlternates>
+			<PieceImage size="96">
+				<Layer image="@drawable/xsokoban_floor.png" />
+			</PieceImage>
+		</PieceImageAlternates>
+	</Floor>
+	<DeadFloor>
+		<PieceImageAlternates>
+			<PieceImage size="96">
+				<Layer image="@drawable/xsokoban_dead_floor.png" />
+			</PieceImage>
+		</PieceImageAlternates>
+	</DeadFloor>
+	<Goal>
+		<PieceImageAlternates>
+			<PieceImage size="96">
+				<Layer image="@drawable/xsokoban_goal.png" />
+			</PieceImage>
+		</PieceImageAlternates>
+	</Goal>
+	<LeftArrow>
+		<PieceImageAlternates>
+			<PieceImage size="128">
+				<Layer image="@drawable/common_arrow.png">
+					<Effect>
+						<RotateLeft />
+						&ArrowColor;
+					</Effect>
+				</Layer>
+			</PieceImage>		
+		</PieceImageAlternates>
+	</LeftArrow>
+	<RightArrow>
+		<PieceImageAlternates>
+			<PieceImage size="128">
+				<Layer image="@drawable/common_arrow.png">
+					<Effect>
+						<RotateLeft />
+						<HMirror />
+						&ArrowColor;
+					</Effect>
+				</Layer>
+			</PieceImage>		
+		</PieceImageAlternates>
+	</RightArrow>
+	<UpArrow>
+		<PieceImageAlternates>
+			<PieceImage size="128">
+				<Layer image="@drawable/common_arrow.png">
+					<Effect>
+						<Move yoffset="2" />
+						&ArrowColor;
+					</Effect>
+				</Layer>
+			</PieceImage>		
+		</PieceImageAlternates>
+	</UpArrow>
+	<DownArrow>
+		<PieceImageAlternates>
+			<PieceImage size="128">
+				<Layer image="@drawable/common_arrow.png">
+					<Effect>
+						<VMirror />
+						&ArrowColor;
+					</Effect>
+				</Layer>
+			</PieceImage>		
+		</PieceImageAlternates>
+	</DownArrow>
+	<Wall>
+		<WallPieceAlternates left="nonwall" right="nonwall" upper="nonwall" lower="nonwall">
+			<PieceImage size="128">
+				<Effect>
+					&WallColor;
+				</Effect>
+				<Layer image="@drawable/xsokoban_eeee_wall.png" />
+			</PieceImage>
+		</WallPieceAlternates>
+		<WallPieceAlternates left="nonwall" right="nonwall" upper="wall" lower="nonwall">
+			<PieceImage size="128">
+				<Effect>
+					&WallColor;
+				</Effect>
+				<Layer image="@drawable/xsokoban_weee_wall.png" />
+			</PieceImage>
+		</WallPieceAlternates>
+		<WallPieceAlternates left="wall" right="nonwall" upper="nonwall" lower="nonwall">
+			<PieceImage size="128">
+				<Effect>
+					&WallColor; 
+				</Effect>
+				<Layer image="@drawable/xsokoban_ewee_wall.png" />
+			</PieceImage>
+		</WallPieceAlternates>
+		<WallPieceAlternates left="wall" right="nonwall" upper="wall" lower="nonwall">
+			<PieceImage size="128">
+				<Effect>
+					&WallColor; 
+				</Effect>
+				<Layer image="@drawable/xsokoban_wwee_wall.png" />
+			</PieceImage>
+		</WallPieceAlternates>
+		<WallPieceAlternates left="nonwall" right="wall" upper="nonwall" lower="nonwall">
+			<PieceImage size="128">
+				<Effect>
+					&WallColor; 
+				</Effect>
+				<Layer image="@drawable/xsokoban_eewe_wall.png" />
+			</PieceImage>
+		</WallPieceAlternates>
+		<WallPieceAlternates left="nonwall" right="wall" upper="wall" lower="nonwall">
+			<PieceImage size="128">
+				<Effect>
+					&WallColor; 
+				</Effect>
+				<Layer image="@drawable/xsokoban_wewe_wall.png" />
+			</PieceImage>
+		</WallPieceAlternates>
+		<WallPieceAlternates left="wall" right="wall" upper="nonwall" lower="nonwall">
+			<PieceImage size="128">
+				<Effect>
+					&WallColor; 
+				</Effect>
+				<Layer image="@drawable/xsokoban_ewwe_wall.png" />
+			</PieceImage>
+		</WallPieceAlternates>
+		<WallPieceAlternates left="wall" right="wall" upper="wall" lower="nonwall">
+			<PieceImage size="128">
+				<Effect>
+					&WallColor; 
+				</Effect>
+				<Layer image="@drawable/xsokoban_wwwe_wall.png" />
+			</PieceImage>
+		</WallPieceAlternates>
+		<WallPieceAlternates left="nonwall" right="nonwall" upper="nonwall" lower="wall">
+			<PieceImage size="128">
+				<Effect>
+					&WallColor; 
+				</Effect>
+				<Layer image="@drawable/xsokoban_eeew_wall.png" />
+			</PieceImage>
+		</WallPieceAlternates>
+		<WallPieceAlternates left="nonwall" right="nonwall" upper="wall" lower="wall">
+			<PieceImage size="128">
+				<Effect>
+					&WallColor; 
+				</Effect>
+				<Layer image="@drawable/xsokoban_weew_wall.png" />
+			</PieceImage>
+		</WallPieceAlternates>
+		<WallPieceAlternates left="wall" right="nonwall" upper="nonwall" lower="wall">
+			<PieceImage size="128">
+				<Effect>
+					&WallColor; 
+				</Effect>
+				<Layer image="@drawable/xsokoban_ewew_wall.png" />
+			</PieceImage>
+		</WallPieceAlternates>
+		<WallPieceAlternates left="wall" right="nonwall" upper="wall" lower="wall">
+			<PieceImage size="128">
+				<Effect>
+					&WallColor; 
+				</Effect>
+				<Layer image="@drawable/xsokoban_wwew_wall.png" />
+			</PieceImage>
+		</WallPieceAlternates>
+		<WallPieceAlternates left="nonwall" right="wall" upper="nonwall" lower="wall">
+			<PieceImage size="128">
+				<Effect>
+					&WallColor; 
+				</Effect>
+				<Layer image="@drawable/xsokoban_eeww_wall.png" />
+			</PieceImage>
+		</WallPieceAlternates>
+		<WallPieceAlternates left="nonwall" right="wall" upper="wall" lower="wall">
+			<PieceImage size="128">
+				<Effect>
+					&WallColor; 
+				</Effect>
+				<Layer image="@drawable/xsokoban_weww_wall.png" />
+			</PieceImage>
+		</WallPieceAlternates>
+		<WallPieceAlternates left="wall" right="wall" upper="nonwall" lower="wall">
+			<PieceImage size="128">
+				<Effect>
+					&WallColor; 
+				</Effect>
+				<Layer image="@drawable/xsokoban_ewww_wall.png" />
+			</PieceImage>
+		</WallPieceAlternates>
+		<WallPieceAlternates left="wall" right="wall" upper="wall" lower="wall">
+			<PieceImage size="128">
+				<Effect>
+					&WallColor; 
+				</Effect>
+				<Layer image="@drawable/xsokoban_wwwww_wall.png" />
+			</PieceImage>
+		</WallPieceAlternates>
+	</Wall>
+	<Outside>
+	</Outside>
+</EasySokTheme>

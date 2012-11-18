@@ -1,0 +1,146 @@
+<!DOCTYPE EasySokTheme SYSTEM "easysoktheme.dtd">
+
+<EasySokTheme name="Abstract" red="192" green="192" blue="192">
+	<KeeperOnFloor>
+		<PieceImageAlternates>
+			<PieceImage size="128">
+				<Layer red="160" green="160" blue="160" />
+				<Layer image="@drawable/abstract_keeper.png" />
+			</PieceImage>
+		</PieceImageAlternates>
+	</KeeperOnFloor>
+	<KeeperOnDeadFloor>
+		<PieceImageAlternates>
+			<PieceImage size="128">
+				<Layer red="128" green="128" blue="128" />
+				<Layer image="@drawable/abstract_keeper.png" />
+			</PieceImage>
+		</PieceImageAlternates>
+	</KeeperOnDeadFloor>
+	<KeeperOnGoal>
+		<PieceImageAlternates>
+			<PieceImage size="128">
+				<Layer red="160" green="160" blue="160" />
+				<Layer image="@drawable/abstract_goal.png" />
+				<Layer image="@drawable/abstract_keeper.png" />
+			</PieceImage>
+		</PieceImageAlternates>
+	</KeeperOnGoal>
+	<MovingKeeper>
+		<PieceImageAlternates>
+			<PieceImage size="128">
+				<Layer image="@drawable/abstract_keeper.png" />
+			</PieceImage>
+		</PieceImageAlternates>
+	</MovingKeeper>
+	<VirtualKeeper>
+		<PieceImageAlternates>
+			<PieceImage size="128">
+				<Layer image="@drawable/abstract_virtual_keeper.png" />
+			</PieceImage>
+		</PieceImageAlternates>
+	</VirtualKeeper>
+	<GemOnFloor>
+		<PieceImageAlternates>
+			<PieceImage size="128">
+				<Layer red="160" green="160" blue="160" />
+				<Layer image="@drawable/abstract_gem.png" />
+			</PieceImage>
+		</PieceImageAlternates>
+	</GemOnFloor>
+	<GemOnDeadFloor>
+		<PieceImageAlternates>
+			<PieceImage size="128">
+				<Layer red="128" green="128" blue="128" />
+				<Layer image="@drawable/abstract_gem.png" />
+			</PieceImage>
+		</PieceImageAlternates>
+	</GemOnDeadFloor>
+	<GemOnGoal>
+		<PieceImageAlternates>
+			<PieceImage size="128">
+				<Layer red="160" green="160" blue="160" />
+				<Layer image="@drawable/abstract_goal.png" />
+				<Layer image="@drawable/abstract_gem.png" />
+			</PieceImage>
+		</PieceImageAlternates>
+	</GemOnGoal>
+	<MovingGem>
+		<PieceImageAlternates>
+			<PieceImage size="128">
+				<Layer image="@drawable/abstract_gem.png" />
+			</PieceImage>
+		</PieceImageAlternates>
+	</MovingGem>
+	<Floor>
+		<PieceImageAlternates>
+			<PieceImage size="128">
+				<Layer red="160" green="160" blue="160" />
+			</PieceImage>
+		</PieceImageAlternates>
+	</Floor>
+	<DeadFloor>
+		<PieceImageAlternates>
+			<PieceImage size="128">
+				<Layer red="128" green="128" blue="128" />
+			</PieceImage>
+		</PieceImageAlternates>
+	</DeadFloor>
+	<Goal>
+		<PieceImageAlternates>
+			<PieceImage size="128">
+				<Layer red="160" green="160" blue="160" />
+				<Layer image="@drawable/abstract_goal.png" />
+			</PieceImage>
+		</PieceImageAlternates>
+	</Goal>
+	<LeftArrow>
+		<PieceImageAlternates>
+			<PieceImage size="128">
+				<Layer image="@drawable/abstract_arrow.png">
+					<Effect>
+						<RotateLeft />
+					</Effect>
+				</Layer>
+			</PieceImage>		
+		</PieceImageAlternates>
+	</LeftArrow>
+	<RightArrow>
+		<PieceImageAlternates>
+			<PieceImage size="128">
+				<Layer image="@drawable/abstract_arrow.png">
+					<Effect>
+						<RotateRight />
+					</Effect>
+				</Layer>
+			</PieceImage>		
+		</PieceImageAlternates>
+	</RightArrow>
+	<UpArrow>
+		<PieceImageAlternates>
+			<PieceImage size="128">
+				<Layer image="@drawable/abstract_arrow.png" />
+			</PieceImage>		
+		</PieceImageAlternates>
+	</UpArrow>
+	<DownArrow>
+		<PieceImageAlternates>
+			<PieceImage size="128">
+				<Layer image="@drawable/abstract_arrow.png">
+					<Effect>
+						<UTurn />
+					</Effect>
+				</Layer>
+			</PieceImage>		
+		</PieceImageAlternates>
+	</DownArrow>
+	<Wall>
+		<WallPieceAlternates>
+			<PieceImage size="128">
+				<Layer red="64" green="64" blue="64" />
+			</PieceImage>
+		</WallPieceAlternates>
+	</Wall>
+	<Outside>
+	</Outside>
+</EasySokTheme>

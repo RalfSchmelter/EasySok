@@ -1,0 +1,416 @@
+<!DOCTYPE EasySokTheme SYSTEM "easysoktheme.dtd" [
+
+<!ENTITY ArrowColor '<Colorize red="64" green="192" blue="192" factor="1.0" />'>
+
+]>
+
+<EasySokTheme name="Warehouse Keeper" image="@drawable/warehouse_keeper_theme_background.jpg">
+	<LeftKeeperOnFloor>
+		<PieceImageAlternates>
+			<PieceImage size="64">
+                                <Layer image="@drawable/warehouse_keeper_floor.png" />
+                                <Layer image="@drawable/warehouse_keeper_keeper_shadow.png">              
+					<Effect>
+						<BlendAlpha factor="0.5" alpha="1.0" />
+						<Move xoffset="-6" yoffset="8" />
+					</Effect>
+				</Layer>
+				<Layer image="@drawable/warehouse_keeper_only_keeper.png" />
+			</PieceImage>
+		</PieceImageAlternates>
+	</LeftKeeperOnFloor>
+	<RightKeeperOnFloor>
+		<PieceImageAlternates>
+			<PieceImage size="64">
+                                <Layer image="@drawable/warehouse_keeper_floor.png" />
+                                <Layer image="@drawable/warehouse_keeper_keeper_shadow.png">              
+					<Effect>
+						<UTurn /> 
+						<BlendAlpha factor="0.5" alpha="1.0" />
+						<Move xoffset="-6" yoffset="8" />
+					</Effect>
+				</Layer>
+				<Layer image="@drawable/warehouse_keeper_only_keeper.png">
+					<Effect>
+						<UTurn />
+					</Effect>
+				</Layer>
+			</PieceImage>
+		</PieceImageAlternates>
+	</RightKeeperOnFloor>
+	<UpKeeperOnFloor>
+		<PieceImageAlternates>
+			<PieceImage size="64">
+                                <Layer image="@drawable/warehouse_keeper_floor.png" />
+                                <Layer image="@drawable/warehouse_keeper_keeper_shadow.png">              
+					<Effect>
+						<RotateRight /> 
+						<BlendAlpha factor="0.5" alpha="1.0" />
+						<Move xoffset="-6" yoffset="8" />
+					</Effect>
+				</Layer>
+				<Layer image="@drawable/warehouse_keeper_only_keeper.png">
+					<Effect>
+						<RotateRight />
+					</Effect>
+				</Layer>
+			</PieceImage>
+		</PieceImageAlternates>
+	</UpKeeperOnFloor>
+	<DownKeeperOnFloor>
+		<PieceImageAlternates>
+			<PieceImage size="64">
+                                <Layer image="@drawable/warehouse_keeper_floor.png" />
+                                <Layer image="@drawable/warehouse_keeper_keeper_shadow.png">              
+					<Effect>
+						<RotateLeft /> 
+						<BlendAlpha factor="0.5" alpha="1.0" />
+						<Move xoffset="-6" yoffset="8" />
+					</Effect>
+				</Layer>
+				<Layer image="@drawable/warehouse_keeper_only_keeper.png">
+					<Effect>
+						<RotateLeft />
+					</Effect>
+				</Layer>
+			</PieceImage>
+		</PieceImageAlternates>
+	</DownKeeperOnFloor>
+	<LeftKeeperOnDeadFloor>
+		<PieceImageAlternates>
+			<PieceImage size="64">
+                                <Layer image="@drawable/warehouse_keeper_dead_floor.png" />
+                                <Layer image="@drawable/warehouse_keeper_keeper_shadow.png">              
+					<Effect>
+						<BlendAlpha factor="0.5" alpha="1.0" />
+						<Move xoffset="-6" yoffset="8" />
+					</Effect>
+				</Layer>
+				<Layer image="@drawable/warehouse_keeper_only_keeper.png" />
+			</PieceImage>
+		</PieceImageAlternates>
+	</LeftKeeperOnDeadFloor>
+	<RightKeeperOnDeadFloor>
+		<PieceImageAlternates>
+			<PieceImage size="64">
+                                <Layer image="@drawable/warehouse_keeper_dead_floor.png" />
+                                <Layer image="@drawable/warehouse_keeper_keeper_shadow.png">              
+					<Effect>
+						<UTurn /> 
+						<BlendAlpha factor="0.5" alpha="1.0" />
+						<Move xoffset="-6" yoffset="8" />
+					</Effect>
+				</Layer>
+				<Layer image="@drawable/warehouse_keeper_only_keeper.png">
+					<Effect>
+						<UTurn />
+					</Effect>
+				</Layer>
+			</PieceImage>
+		</PieceImageAlternates>
+	</RightKeeperOnDeadFloor>
+	<UpKeeperOnDeadFloor>
+		<PieceImageAlternates>
+			<PieceImage size="64">
+                                <Layer image="@drawable/warehouse_keeper_dead_floor.png" />
+                                <Layer image="@drawable/warehouse_keeper_keeper_shadow.png">              
+					<Effect>
+						<RotateRight /> 
+						<BlendAlpha factor="0.5" alpha="1.0" />
+						<Move xoffset="-6" yoffset="8" />
+					</Effect>
+				</Layer>
+				<Layer image="@drawable/warehouse_keeper_only_keeper.png">
+					<Effect>
+						<RotateRight />
+					</Effect>
+				</Layer>
+			</PieceImage>
+		</PieceImageAlternates>
+	</UpKeeperOnDeadFloor>
+	<DownKeeperOnDeadFloor>
+		<PieceImageAlternates>
+			<PieceImage size="64">
+                                <Layer image="@drawable/warehouse_keeper_dead_floor.png" />
+                                <Layer image="@drawable/warehouse_keeper_keeper_shadow.png">              
+					<Effect>
+						<RotateLeft /> 
+						<BlendAlpha factor="0.5" alpha="1.0" />
+						<Move xoffset="-6" yoffset="8" />
+					</Effect>
+				</Layer>
+				<Layer image="@drawable/warehouse_keeper_only_keeper.png">
+					<Effect>
+						<RotateLeft />
+					</Effect>
+				</Layer>
+			</PieceImage>
+		</PieceImageAlternates>
+	</DownKeeperOnDeadFloor>
+	<LeftKeeperOnGoal>
+		<PieceImageAlternates>
+			<PieceImage size="64">
+                                <Layer image="@drawable/warehouse_keeper_goal.png" />
+                                <Layer image="@drawable/warehouse_keeper_keeper_shadow.png">              
+					<Effect>
+						<BlendAlpha factor="0.7" alpha="1.0" />
+						<Move xoffset="-6" yoffset="8" />
+					</Effect>
+				</Layer>
+				<Layer image="@drawable/warehouse_keeper_keeper_goal.png" />
+			</PieceImage>
+		</PieceImageAlternates>
+	</LeftKeeperOnGoal>
+	<RightKeeperOnGoal>
+		<PieceImageAlternates>
+			<PieceImage size="64">
+                                <Layer image="@drawable/warehouse_keeper_goal.png" />
+                                <Layer image="@drawable/warehouse_keeper_keeper_shadow.png">              
+					<Effect>
+						<UTurn /> 
+						<BlendAlpha factor="0.7" alpha="1.0" />
+						<Move xoffset="-6" yoffset="8" />
+					</Effect>
+				</Layer>
+				<Layer image="@drawable/warehouse_keeper_keeper_goal.png">
+					<Effect>
+						<UTurn />
+					</Effect>
+				</Layer>
+			</PieceImage>
+		</PieceImageAlternates>
+	</RightKeeperOnGoal>
+	<UpKeeperOnGoal>
+		<PieceImageAlternates>
+			<PieceImage size="64">
+                                <Layer image="@drawable/warehouse_keeper_goal.png" />
+                                <Layer image="@drawable/warehouse_keeper_keeper_shadow.png">              
+					<Effect>
+						<RotateRight /> 
+						<BlendAlpha factor="0.7" alpha="1.0" />
+						<Move xoffset="-6" yoffset="8" />
+					</Effect>
+				</Layer>
+				<Layer image="@drawable/warehouse_keeper_keeper_goal.png">
+					<Effect>
+						<RotateRight />
+					</Effect>
+				</Layer>
+			</PieceImage>
+		</PieceImageAlternates>
+	</UpKeeperOnGoal>
+	<DownKeeperOnGoal>
+		<PieceImageAlternates>
+			<PieceImage size="64">
+                                <Layer image="@drawable/warehouse_keeper_goal.png" />
+                                <Layer image="@drawable/warehouse_keeper_keeper_goal.png">              
+					<Effect>
+						<RotateLeft /> 
+						<BlendAlpha factor="0.7" alpha="1.0" />
+						<Move xoffset="-6" yoffset="8" />
+					</Effect>
+				</Layer>
+				<Layer image="@drawable/warehouse_keeper_only_keeper.png">
+					<Effect>
+						<RotateLeft />
+					</Effect>
+				</Layer>
+			</PieceImage>
+		</PieceImageAlternates>
+	</DownKeeperOnGoal>
+	<LeftMovingKeeper>
+		<PieceImageAlternates>
+			<PieceImage size="64">
+				<Layer image="@drawable/warehouse_keeper_only_keeper.png" />
+			</PieceImage>
+		</PieceImageAlternates>
+	</LeftMovingKeeper>
+	<RightMovingKeeper>
+		<PieceImageAlternates>
+			<PieceImage size="64">
+				<Layer image="@drawable/warehouse_keeper_only_keeper.png">
+					<Effect>
+						<UTurn />
+					</Effect>
+				</Layer>
+			</PieceImage>
+		</PieceImageAlternates>
+	</RightMovingKeeper>
+	<UpMovingKeeper>
+		<PieceImageAlternates>
+			<PieceImage size="64">
+				<Layer image="@drawable/warehouse_keeper_only_keeper.png">
+					<Effect>
+						<RotateRight />
+					</Effect>
+				</Layer>
+			</PieceImage>
+		</PieceImageAlternates>
+	</UpMovingKeeper>
+	<DownMovingKeeper>
+		<PieceImageAlternates>
+			<PieceImage size="64">
+				<Layer image="@drawable/warehouse_keeper_only_keeper.png">
+					<Effect>
+						<RotateLeft />
+					</Effect>
+				</Layer>
+			</PieceImage>
+		</PieceImageAlternates>
+	</DownMovingKeeper>
+	<LeftVirtualKeeper>
+		<PieceImageAlternates>
+			<PieceImage size="64">
+				<Effect>
+					<RotateLeft />
+				</Effect>
+				<Layer image="@drawable/warehouse_keeper_virtual_keeper.png" />
+			</PieceImage>
+		</PieceImageAlternates>
+	</LeftVirtualKeeper>
+	<RightVirtualKeeper>
+		<PieceImageAlternates>
+			<PieceImage size="64">
+				<Effect>
+					<RotateRight />
+				</Effect>
+				<Layer image="@drawable/warehouse_keeper_virtual_keeper.png" />
+			</PieceImage>
+		</PieceImageAlternates>
+	</RightVirtualKeeper>
+	<UpVirtualKeeper>
+		<PieceImageAlternates>
+			<PieceImage size="64">
+				<Layer image="@drawable/warehouse_keeper_virtual_keeper.png" />
+			</PieceImage>
+		</PieceImageAlternates>
+	</UpVirtualKeeper>
+	<DownVirtualKeeper>
+		<PieceImageAlternates>
+			<PieceImage size="64">
+				<Effect>
+					<UTurn />
+				</Effect>
+				<Layer image="@drawable/warehouse_keeper_virtual_keeper.png" />
+			</PieceImage>
+		</PieceImageAlternates>
+	</DownVirtualKeeper>
+	<GemOnFloor>
+		<PieceImageAlternates>
+			<PieceImage size="64">
+				<Layer image="@drawable/warehouse_keeper_gem.png" />
+			</PieceImage>
+		</PieceImageAlternates>
+	</GemOnFloor>
+	<GemOnDeadFloor>
+		<PieceImageAlternates>
+			<PieceImage size="64">
+				<Layer image="@drawable/warehouse_keeper_dead_gem.png" />
+			</PieceImage>
+		</PieceImageAlternates>
+	</GemOnDeadFloor>
+	<GemOnGoal>
+		<PieceImageAlternates>
+			<PieceImage size="64">
+				<Layer image="@drawable/warehouse_keeper_gem_on_goal.png" />
+			</PieceImage>
+		</PieceImageAlternates>
+	</GemOnGoal>
+	<MovingGem>
+		<PieceImageAlternates>
+			<PieceImage size="64">
+				<Layer image="@drawable/warehouse_keeper_only_gem.png" />
+			</PieceImage>
+		</PieceImageAlternates>
+	</MovingGem>
+	<Floor>
+		<PieceImageAlternates>
+			<PieceImage size="64">
+				<Layer image="@drawable/warehouse_keeper_floor.png" />
+			</PieceImage>
+		</PieceImageAlternates>
+	</Floor>
+	<DeadFloor>
+		<PieceImageAlternates>
+			<PieceImage size="64">
+				<Layer image="@drawable/warehouse_keeper_dead_floor.png" />
+			</PieceImage>
+		</PieceImageAlternates>
+	</DeadFloor>
+	<Goal>
+		<PieceImageAlternates>
+			<PieceImage size="64">
+				<Layer image="@drawable/warehouse_keeper_goal.png" />
+			</PieceImage>
+		</PieceImageAlternates>
+	</Goal>
+	<LeftArrow>
+		<PieceImageAlternates>
+			<PieceImage size="128">
+				<Layer image="@drawable/common_arrow.png">
+					<Effect>
+						<RotateLeft />
+						<Move xoffset="-4" />
+						&ArrowColor;
+					</Effect>
+				</Layer>
+			</PieceImage>		
+		</PieceImageAlternates>
+	</LeftArrow>
+	<RightArrow>
+		<PieceImageAlternates>
+			<PieceImage size="128">
+				<Layer image="@drawable/common_arrow.png">
+					<Effect>
+						<RotateLeft />
+						<HMirror />
+						<Move xoffset="6" />
+						&ArrowColor;
+					</Effect>
+				</Layer>
+			</PieceImage>		
+		</PieceImageAlternates>
+	</RightArrow>
+	<UpArrow>
+		<PieceImageAlternates>
+			<PieceImage size="128">
+				<Layer image="@drawable/common_arrow.png">
+					<Effect>
+						&ArrowColor;
+					</Effect>
+				</Layer>
+			</PieceImage>		
+		</PieceImageAlternates>
+	</UpArrow>
+	<DownArrow>
+		<PieceImageAlternates>
+			<PieceImage size="128">
+				<Layer image="@drawable/common_arrow.png">
+					<Effect>
+						<VMirror />
+						<Move yoffset="4" />
+						&ArrowColor;
+					</Effect>
+				</Layer>
+			</PieceImage>		
+		</PieceImageAlternates>
+	</DownArrow>
+	<Wall>
+		<WallPieceAlternates>
+			<PieceImage size="64">
+				<Layer image="@drawable/warehouse_keeper_wall1.png" />
+			</PieceImage>
+			<PieceImage size="64">
+				<Layer image="@drawable/warehouse_keeper_wall3.png" />
+			</PieceImage>
+			<PieceImage size="64">
+				<Layer image="@drawable/warehouse_keeper_wall2.png" />
+			</PieceImage>
+			<PieceImage size="64">
+				<Layer image="@drawable/warehouse_keeper_wall4.png" />
+			</PieceImage>
+		</WallPieceAlternates>
+	</Wall>
+	<Outside>
+	</Outside>
+</EasySokTheme>

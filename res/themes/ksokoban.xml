@@ -1,0 +1,342 @@
+<!DOCTYPE EasySokTheme SYSTEM "easysoktheme.dtd" [
+
+<!ENTITY ArrowColor '<Colorize red="255" green="64" blue="64" factor="1.0" />'>
+
+]>
+
+<EasySokTheme name="KSokoban" image="@drawable/ksokoban_theme_background.jpg">
+	<KeeperOnFloor>
+		<PieceImageAlternates>
+			<PieceImage size="96">
+				<Layer image="@drawable/ksokoban_floor.png" />
+				<Layer image="@drawable/ksokoban_moving_keeper.png" />
+			</PieceImage>
+		</PieceImageAlternates>
+	</KeeperOnFloor>
+	<KeeperOnDeadFloor>
+		<PieceImageAlternates>
+			<PieceImage size="96">
+				<Layer image="@drawable/ksokoban_dead_floor.png" />
+				<Layer image="@drawable/ksokoban_moving_keeper.png" />
+			</PieceImage>
+		</PieceImageAlternates>
+	</KeeperOnDeadFloor>
+	<KeeperOnGoal>
+		<PieceImageAlternates>
+			<PieceImage size="96">
+				<Layer image="@drawable/ksokoban_goal.png" />
+				<Layer image="@drawable/ksokoban_moving_keeper.png" />
+			</PieceImage>
+		</PieceImageAlternates>
+	</KeeperOnGoal>
+	<MovingKeeper>
+		<PieceImageAlternates>
+			<PieceImage size="96">
+				<Layer image="@drawable/ksokoban_moving_keeper.png" />
+			</PieceImage>
+		</PieceImageAlternates>
+	</MovingKeeper>
+	<VirtualKeeper>
+		<PieceImageAlternates>
+			<PieceImage size="96">
+				<Layer image="@drawable/ksokoban_moving_keeper.png">
+					<Effect>
+						<BlendRgb factor="0.2" />
+					</Effect>
+				</Layer>
+			</PieceImage>
+		</PieceImageAlternates>
+	</VirtualKeeper>
+	<GemOnFloor>
+		<PieceImageAlternates>
+			<PieceImage size="96">
+				<Layer image="@drawable/ksokoban_floor.png" />
+				<Layer image="@drawable/ksokoban_moving_gem.png">
+					<Effect>
+						<BlendAlpha factor="0.5" alpha="200" />
+					</Effect>
+				</Layer>
+			</PieceImage>
+		</PieceImageAlternates>
+	</GemOnFloor>
+	<GemOnDeadFloor>
+		<PieceImageAlternates>
+			<PieceImage size="96">
+				<Layer image="@drawable/ksokoban_dead_floor.png" />
+				<Layer image="@drawable/ksokoban_moving_gem.png">
+					<Effect>
+						<BlendAlpha factor="0.5" alpha="200" />
+					</Effect>
+				</Layer>
+			</PieceImage>
+		</PieceImageAlternates>
+	</GemOnDeadFloor>
+	<GemOnGoal>
+		<PieceImageAlternates>
+			<PieceImage size="96">
+				<Layer image="@drawable/ksokoban_goal.png" />
+				<Layer image="@drawable/ksokoban_moving_gem.png">
+					<Effect>
+						<BlendAlpha factor="0.5" alpha="200" />
+					</Effect>
+				</Layer>
+			</PieceImage>
+		</PieceImageAlternates>
+	</GemOnGoal>
+	<MovingGem>
+		<PieceImageAlternates>
+			<PieceImage size="96">
+				<Layer image="@drawable/ksokoban_moving_gem.png" />
+			</PieceImage>
+		</PieceImageAlternates>
+	</MovingGem>
+	<Floor>
+		<PieceImageAlternates>
+			<PieceImage size="96">
+				<Layer image="@drawable/ksokoban_floor.png" />
+			</PieceImage>
+		</PieceImageAlternates>
+	</Floor>
+	<DeadFloor>
+		<PieceImageAlternates>
+			<PieceImage size="96">
+				<Layer image="@drawable/ksokoban_dead_floor.png" />
+			</PieceImage>
+		</PieceImageAlternates>
+	</DeadFloor>
+	<Goal>
+		<PieceImageAlternates>
+			<PieceImage size="96">
+				<Layer image="@drawable/ksokoban_goal.png" />
+			</PieceImage>
+		</PieceImageAlternates>
+	</Goal>
+	<LeftArrow>
+		<PieceImageAlternates>
+			<PieceImage size="128" xoffset="-0.05" yoffset="0.15">
+				<Layer image="@drawable/common_arrow.png">
+					<Effect>
+						<RotateLeft />
+						&ArrowColor;
+					</Effect>
+				</Layer>
+			</PieceImage>		
+		</PieceImageAlternates>
+	</LeftArrow>
+	<RightArrow>
+		<PieceImageAlternates>
+			<PieceImage size="128" xoffset="0.05" yoffset="0.15">
+				<Layer image="@drawable/common_arrow.png">
+					<Effect>
+						<RotateLeft />
+						<HMirror />
+						&ArrowColor;
+					</Effect>
+				</Layer>
+			</PieceImage>		
+		</PieceImageAlternates>
+	</RightArrow>
+	<UpArrow>
+		<PieceImageAlternates>
+			<PieceImage size="128" yoffset="-0.1">
+				<Layer image="@drawable/common_arrow.png">
+					<Effect>
+						&ArrowColor;
+					</Effect>
+				</Layer>
+			</PieceImage>		
+		</PieceImageAlternates>
+	</UpArrow>
+	<DownArrow>
+		<PieceImageAlternates>
+			<PieceImage size="128" yoffset="0.1">
+				<Layer image="@drawable/common_arrow.png">
+					<Effect>
+						<VMirror />
+						&ArrowColor;
+					</Effect>
+				</Layer>
+			</PieceImage>		
+		</PieceImageAlternates>
+	</DownArrow>
+	<Wall>
+		<WallPieceAlternates left="wall" right="wall">
+			<PieceImage size="64" xoffset="0.5">
+				<Layer image="@drawable/ksokoban_stone_1.png" />
+			</PieceImage>
+			<PieceImage size="64" xoffset="0.5">
+				<Layer image="@drawable/ksokoban_stone_3.png" />
+			</PieceImage>
+			<PieceImage size="64" xoffset="0.5">
+				<Layer image="@drawable/ksokoban_stone_5.png" />
+			</PieceImage>
+			<PieceImage size="64" xoffset="0.5">
+				<Layer image="@drawable/ksokoban_stone_2.png" />
+			</PieceImage>
+			<PieceImage size="64" xoffset="0.5">
+				<Layer image="@drawable/ksokoban_stone_4.png" />
+			</PieceImage>
+			<PieceImage size="64" xoffset="0.5">
+				<Layer image="@drawable/ksokoban_stone_6.png" />
+			</PieceImage>
+		</WallPieceAlternates>
+		<WallPieceAlternates left="wall" right="wall">
+			<PieceImage size="64" yoffset="0.5">
+				<Layer image="@drawable/ksokoban_stone_2.png" />
+			</PieceImage>
+			<PieceImage size="64" yoffset="0.5">
+				<Layer image="@drawable/ksokoban_stone_4.png" />
+			</PieceImage>
+			<PieceImage size="64" yoffset="0.5">
+				<Layer image="@drawable/ksokoban_stone_6.png" />
+			</PieceImage>
+			<PieceImage size="64" yoffset="0.5">
+				<Layer image="@drawable/ksokoban_stone_1.png" />
+			</PieceImage>
+			<PieceImage size="64" yoffset="0.5">
+				<Layer image="@drawable/ksokoban_stone_3.png" />
+			</PieceImage>
+			<PieceImage size="64" yoffset="0.5">
+				<Layer image="@drawable/ksokoban_stone_5.png" />
+			</PieceImage>
+		</WallPieceAlternates>		
+		<WallPieceAlternates left="nonwall" right="wall">
+			<PieceImage size="64">
+				<Layer image="@drawable/ksokoban_halfstone_1.png" />
+			</PieceImage>
+			<PieceImage size="64">
+				<Layer image="@drawable/ksokoban_halfstone_2.png" />
+			</PieceImage>
+			<PieceImage size="64">
+				<Layer image="@drawable/ksokoban_halfstone_3.png" />
+			</PieceImage>
+			<PieceImage size="64">
+				<Layer image="@drawable/ksokoban_halfstone_4.png" />
+			</PieceImage>
+		</WallPieceAlternates>
+		<WallPieceAlternates left="nonwall" right="wall">
+			<PieceImage size="64" xoffset="0.5">
+				<Layer image="@drawable/ksokoban_stone_1.png" />
+			</PieceImage>
+			<PieceImage size="64" xoffset="0.5">
+				<Layer image="@drawable/ksokoban_stone_3.png" />
+			</PieceImage>
+			<PieceImage size="64" xoffset="0.5">
+				<Layer image="@drawable/ksokoban_stone_5.png" />
+			</PieceImage>
+			<PieceImage size="64" xoffset="0.5">
+				<Layer image="@drawable/ksokoban_stone_2.png" />
+			</PieceImage>
+			<PieceImage size="64" xoffset="0.5">
+				<Layer image="@drawable/ksokoban_stone_4.png" />
+			</PieceImage>
+			<PieceImage size="64" xoffset="0.5">
+				<Layer image="@drawable/ksokoban_stone_5.png" />
+			</PieceImage>
+		</WallPieceAlternates>
+		<WallPieceAlternates left="nonwall" right="wall">
+			<PieceImage size="64" yoffset="0.5">
+				<Layer image="@drawable/ksokoban_stone_2.png" />
+			</PieceImage>
+			<PieceImage size="64" yoffset="0.5">
+				<Layer image="@drawable/ksokoban_stone_4.png" />
+			</PieceImage>
+			<PieceImage size="64" yoffset="0.5">
+				<Layer image="@drawable/ksokoban_stone_6.png" />
+			</PieceImage>
+			<PieceImage size="64" yoffset="0.5">
+				<Layer image="@drawable/ksokoban_stone_1.png" />
+			</PieceImage>
+			<PieceImage size="64" yoffset="0.5">
+				<Layer image="@drawable/ksokoban_stone_3.png" />
+			</PieceImage>
+			<PieceImage size="64" yoffset="0.5">
+				<Layer image="@drawable/ksokoban_stone_5.png" />
+			</PieceImage>
+		</WallPieceAlternates>
+		<WallPieceAlternates left="wall" right="nonwall">
+			<PieceImage size="64" xoffset="0.5">
+				<Layer image="@drawable/ksokoban_halfstone_1.png" />
+			</PieceImage>
+			<PieceImage size="64" xoffset="0.5">
+				<Layer image="@drawable/ksokoban_halfstone_2.png" />
+			</PieceImage>
+			<PieceImage size="64" xoffset="0.5">
+				<Layer image="@drawable/ksokoban_halfstone_3.png" />
+			</PieceImage>
+			<PieceImage size="64" xoffset="0.5">
+				<Layer image="@drawable/ksokoban_halfstone_4.png" />
+			</PieceImage>
+		</WallPieceAlternates>
+		<WallPieceAlternates left="wall" right="nonwall">
+			<PieceImage size="64" yoffset="0.5">
+				<Layer image="@drawable/ksokoban_stone_1.png" />
+			</PieceImage>
+			<PieceImage size="64" yoffset="0.5">
+				<Layer image="@drawable/ksokoban_stone_3.png" />
+			</PieceImage>
+			<PieceImage size="64" yoffset="0.5">
+				<Layer image="@drawable/ksokoban_stone_5.png" />
+			</PieceImage>
+			<PieceImage size="64" yoffset="0.5">
+				<Layer image="@drawable/ksokoban_stone_2.png" />
+			</PieceImage>
+			<PieceImage size="64" yoffset="0.5">
+				<Layer image="@drawable/ksokoban_stone_4.png" />
+			</PieceImage>
+			<PieceImage size="64" yoffset="0.5">
+				<Layer image="@drawable/ksokoban_stone_6.png" />
+			</PieceImage>
+		</WallPieceAlternates>
+		<WallPieceAlternates left="nonwall" right="nonwall">
+			<PieceImage size="64">
+				<Layer image="@drawable/ksokoban_halfstone_1.png" />
+			</PieceImage>
+			<PieceImage size="64">
+				<Layer image="@drawable/ksokoban_halfstone_2.png" />
+			</PieceImage>
+			<PieceImage size="64">
+				<Layer image="@drawable/ksokoban_halfstone_3.png" />
+			</PieceImage>
+			<PieceImage size="64">
+				<Layer image="@drawable/ksokoban_halfstone_4.png" />
+			</PieceImage>
+		</WallPieceAlternates>
+		<WallPieceAlternates left="nonwall" right="nonwall">
+			<PieceImage size="64" xoffset="0.5">
+				<Layer image="@drawable/ksokoban_halfstone_4.png" />
+			</PieceImage>
+			<PieceImage size="64" xoffset="0.5">
+				<Layer image="@drawable/ksokoban_halfstone_3.png" />
+			</PieceImage>
+			<PieceImage size="64" xoffset="0.5">
+				<Layer image="@drawable/ksokoban_halfstone_1.png" />
+			</PieceImage>
+			<PieceImage size="64" xoffset="0.5">
+				<Layer image="@drawable/ksokoban_halfstone_2.png" />
+			</PieceImage>
+		</WallPieceAlternates>
+		<WallPieceAlternates left="nonwall" right="nonwall">
+			<PieceImage size="64" yoffset="0.5">
+				<Layer image="@drawable/ksokoban_stone_2.png" />
+			</PieceImage>
+			<PieceImage size="64" yoffset="0.5">
+				<Layer image="@drawable/ksokoban_stone_4.png" />
+			</PieceImage>
+			<PieceImage size="64" yoffset="0.5">
+				<Layer image="@drawable/ksokoban_stone_6.png" />
+			</PieceImage>
+			<PieceImage size="64" yoffset="0.5">
+				<Layer image="@drawable/ksokoban_stone_1.png" />
+			</PieceImage>
+			<PieceImage size="64" yoffset="0.5">
+				<Layer image="@drawable/ksokoban_stone_3.png" />
+			</PieceImage>
+			<PieceImage size="64" yoffset="0.5">
+				<Layer image="@drawable/ksokoban_stone_5.png" />
+			</PieceImage>
+		</WallPieceAlternates>
+	</Wall>
+	<Outside>
+	</Outside>
+</EasySokTheme>

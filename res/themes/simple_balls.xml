@@ -1,0 +1,293 @@
+<!DOCTYPE EasySokTheme SYSTEM "easysoktheme.dtd" [
+
+<!ENTITY Floor '<Layer red="160" green="160" blue="160" />'>
+<!ENTITY DeadFloor '<Layer red="128" green="128" blue="128" />'>
+<!ENTITY Goal1 '<Layer red="64" green="160" blue="64" />'>
+<!ENTITY Goal2 '<Layer red="64" green="152" blue="64" />'>
+<!ENTITY Keeper '<Layer image="@drawable/simple_balls_ball.png">
+		 <Effect><Colorize red="240" green="64" blue="64" factor="1.2" /></Effect></Layer>'>
+<!ENTITY VirtualKeeper '<Layer image="@drawable/simple_balls_ball.png">
+			<Effect><Colorize red="255" green="160" blue="160" factor="1.0" /></Effect></Layer>'>
+<!ENTITY Gem '<Layer image="@drawable/simple_balls_ball.png">
+	      <Effect><Colorize red="255" green="255" blue="64" factor="1.0" /></Effect></Layer>'>
+<!ENTITY ArrowColor '<Colorize red="224" green="224" blue="64" factor="1.0" />'>
+<!ENTITY WallColor '<Colorize red="160" green="160" blue="255" factor="1.0" />'>
+]>
+
+<EasySokTheme name="SimpleBalls" red="102" green="102" blue="102">
+	<KeeperOnFloor>
+		<PieceImageAlternates>
+			<PieceImage size="96">
+				&Floor;
+				&Keeper;
+			</PieceImage>
+		</PieceImageAlternates>
+	</KeeperOnFloor>
+	<KeeperOnDeadFloor>
+		<PieceImageAlternates>
+			<PieceImage size="96">
+				&DeadFloor;
+				&Keeper;
+			</PieceImage>
+		</PieceImageAlternates>
+	</KeeperOnDeadFloor>
+	<KeeperOnGoal>
+		<PieceImageAlternates>
+			<PieceImage size="96">
+				&Goal1;
+				&Keeper;
+			</PieceImage>
+			<PieceImage size="96">
+				&Goal2;
+				&Keeper;
+			</PieceImage>
+		</PieceImageAlternates>
+	</KeeperOnGoal>
+	<MovingKeeper>
+		<PieceImageAlternates>
+			<PieceImage size="96">
+				&Keeper;
+			</PieceImage>
+		</PieceImageAlternates>
+	</MovingKeeper>
+	<VirtualKeeper>
+		<PieceImageAlternates>
+			<PieceImage size="96">
+				&VirtualKeeper;
+			</PieceImage>
+		</PieceImageAlternates>
+	</VirtualKeeper>
+	<GemOnFloor>
+		<PieceImageAlternates>
+			<PieceImage size="96">
+				&Floor;
+				&Gem;
+			</PieceImage>
+		</PieceImageAlternates>
+	</GemOnFloor>
+	<GemOnDeadFloor>
+		<PieceImageAlternates>
+			<PieceImage size="96">
+				&DeadFloor;
+				&Gem;
+			</PieceImage>
+		</PieceImageAlternates>
+	</GemOnDeadFloor>
+	<GemOnGoal>
+		<PieceImageAlternates>
+			<PieceImage size="96">
+				&Goal1;
+				&Gem;
+			</PieceImage>
+			<PieceImage size="96">
+				&Goal2;
+				&Gem;
+			</PieceImage>
+		</PieceImageAlternates>
+	</GemOnGoal>
+	<MovingGem>
+		<PieceImageAlternates>
+			<PieceImage size="96">
+				&Gem;
+			</PieceImage>
+		</PieceImageAlternates>
+	</MovingGem>
+	<Floor>
+		<PieceImageAlternates>
+			<PieceImage size="96">
+				&Floor;
+			</PieceImage>
+		</PieceImageAlternates>
+	</Floor>
+	<DeadFloor>
+		<PieceImageAlternates>
+			<PieceImage size="96">
+				&DeadFloor;
+			</PieceImage>
+		</PieceImageAlternates>
+	</DeadFloor>
+	<Goal>
+		<PieceImageAlternates>
+			<PieceImage size="96">
+				&Goal1;
+			</PieceImage>
+			<PieceImage size="96">
+				&Goal2;
+			</PieceImage>
+		</PieceImageAlternates>
+	</Goal>
+	<LeftArrow>
+		<PieceImageAlternates>
+			<PieceImage size="128">
+				<Layer image="@drawable/common_arrow.png">
+					<Effect>
+						<RotateLeft />
+						&ArrowColor;
+					</Effect>
+				</Layer>
+			</PieceImage>		
+		</PieceImageAlternates>
+	</LeftArrow>
+	<RightArrow>
+		<PieceImageAlternates>
+			<PieceImage size="128">
+				<Layer image="@drawable/common_arrow.png">
+					<Effect>
+						<RotateLeft />
+						<HMirror />
+						&ArrowColor;
+					</Effect>
+				</Layer>
+			</PieceImage>		
+		</PieceImageAlternates>
+	</RightArrow>
+	<UpArrow>
+		<PieceImageAlternates>
+			<PieceImage size="128">
+				<Layer image="@drawable/common_arrow.png">
+					<Effect>
+						<Move yoffset="2" />
+						&ArrowColor;
+					</Effect>
+				</Layer>
+			</PieceImage>		
+		</PieceImageAlternates>
+	</UpArrow>
+	<DownArrow>
+		<PieceImageAlternates>
+			<PieceImage size="128">
+				<Layer image="@drawable/common_arrow.png">
+					<Effect>
+						<VMirror />
+						&ArrowColor;
+					</Effect>
+				</Layer>
+			</PieceImage>		
+		</PieceImageAlternates>
+	</DownArrow>
+	<Wall>
+		<WallPieceAlternates>
+			<PieceImage size="96">
+				<Layer red="114" green="114" blue="170" />		
+			</PieceImage>
+		</WallPieceAlternates>
+		<WallPieceAlternates upper="nonwall" >
+			<PieceImage size="96">
+				<Effect>
+					&WallColor;
+					<Crop xoffset="0" yoffset="0" width="96" height="20" />
+				</Effect>
+				<Layer image="@drawable/simple_balls_wall3.png" />
+			</PieceImage>
+		</WallPieceAlternates>
+		<WallPieceAlternates lower="nonwall" >
+			<PieceImage size="96">
+				<Effect>
+					&WallColor;
+					<Crop xoffset="0" yoffset="76" width="96" height="20" />
+					<Move yoffset="76" />
+				</Effect>
+				<Layer image="@drawable/simple_balls_wall3.png" />
+			</PieceImage>
+		</WallPieceAlternates>
+		<WallPieceAlternates left="nonwall" >
+			<PieceImage size="96">
+				<Effect>
+					&WallColor;
+					<Crop xoffset="0" yoffset="0" width="20" height="96" />
+				</Effect>
+				<Layer image="@drawable/simple_balls_wall4.png" />
+			</PieceImage>
+		</WallPieceAlternates>
+		<WallPieceAlternates right="nonwall" >
+			<PieceImage size="96">
+				<Effect>
+					&WallColor;
+					<Crop xoffset="76" yoffset="0" width="20" height="96" />
+					<Move xoffset="76" />
+				</Effect>
+				<Layer image="@drawable/simple_balls_wall4.png" />
+			</PieceImage>
+		</WallPieceAlternates>
+		<WallPieceAlternates left="nonwall" upper="nonwall">
+			<PieceImage size="96">
+				<Effect>
+					&WallColor;
+					<Crop xoffset="0" yoffset="0" width="20" height="20" />
+				</Effect>
+				<Layer image="@drawable/simple_balls_wall1.png" />
+			</PieceImage>
+		</WallPieceAlternates>
+		<WallPieceAlternates right="nonwall" upper="nonwall">
+			<PieceImage size="96">
+				<Effect>
+					&WallColor;
+					<Crop xoffset="76" yoffset="0" width="20" height="20" />
+					<Move xoffset="76" />
+				</Effect>
+				<Layer image="@drawable/simple_balls_wall1.png" />
+			</PieceImage>
+		</WallPieceAlternates>
+		<WallPieceAlternates right="nonwall" lower="nonwall">
+			<PieceImage size="96">
+				<Effect>
+					&WallColor;
+					<Crop xoffset="76" yoffset="76" width="20" height="20" />
+					<Move xoffset="76" yoffset="76"/>
+				</Effect>
+				<Layer image="@drawable/simple_balls_wall1.png" />
+			</PieceImage>
+		</WallPieceAlternates>
+		<WallPieceAlternates left="nonwall" lower="nonwall">
+			<PieceImage size="96">
+				<Effect>
+					&WallColor;
+					<Crop xoffset="0" yoffset="76" width="20" height="20" />
+					<Move xoffset="0" yoffset="76"/>
+				</Effect>
+				<Layer image="@drawable/simple_balls_wall1.png" />
+			</PieceImage>
+		</WallPieceAlternates>
+		<WallPieceAlternates left="wall" upperleft="nonwall" upper="wall">
+			<PieceImage size="96">
+				<Effect>
+					&WallColor;
+					<Crop xoffset="0" yoffset="0" width="20" height="20" />
+				</Effect>
+				<Layer image="@drawable/simple_balls_wall2.png" />
+			</PieceImage>
+		</WallPieceAlternates>
+		<WallPieceAlternates right="wall" upperright="nonwall" upper="wall">
+			<PieceImage size="96">
+				<Effect>
+					&WallColor;
+					<Crop xoffset="76" yoffset="0" width="20" height="20" />
+					<Move xoffset="76" />
+				</Effect>
+				<Layer image="@drawable/simple_balls_wall2.png" />
+			</PieceImage>
+		</WallPieceAlternates>
+		<WallPieceAlternates left="wall" lowerleft="nonwall" lower="wall">
+			<PieceImage size="96">
+				<Effect>
+					&WallColor;
+					<Crop xoffset="0" yoffset="76" width="20" height="20" />
+					<Move yoffset="76" />
+				</Effect>
+				<Layer image="@drawable/simple_balls_wall2.png" />
+			</PieceImage>
+		</WallPieceAlternates>
+		<WallPieceAlternates right="wall" lowerright="nonwall" lower="wall">
+			<PieceImage size="96">
+				<Effect>
+					&WallColor;
+					<Crop xoffset="76" yoffset="76" width="20" height="20" />
+					<Move xoffset="76" yoffset="76" />
+				</Effect>
+				<Layer image="@drawable/simple_balls_wall2.png" />
+			</PieceImage>
+		</WallPieceAlternates>
+	</Wall>
+	<Outside>
+	</Outside>
+</EasySokTheme>

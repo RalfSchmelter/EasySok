@@ -1,0 +1,405 @@
+<!DOCTYPE EasySokTheme SYSTEM "easysoktheme.dtd" [
+
+<!ENTITY ArrowColor '<Colorize red="96" green="96" blue="160" factor="0.8" />'>
+
+]>
+
+<EasySokTheme name="Green Ball" red="128" green="128" blue="128" image="@drawable/green_ball_theme_background.jpg">
+	<LeftKeeperOnFloor>
+		<PieceImageAlternates>
+			<PieceImage size="96">
+				<Layer image="@drawable/green_ball_floor.png" />
+				<Layer image="@drawable/green_ball_keeper.png">
+					<Effect>
+						<RotateLeft />
+					</Effect>
+				</Layer>
+			</PieceImage>
+		</PieceImageAlternates>
+	</LeftKeeperOnFloor>
+	<RightKeeperOnFloor>
+		<PieceImageAlternates>
+			<PieceImage size="96">
+				<Layer image="@drawable/green_ball_floor.png" />
+				<Layer image="@drawable/green_ball_keeper.png">
+					<Effect>
+						<RotateRight />
+					</Effect>
+				</Layer>
+			</PieceImage>
+		</PieceImageAlternates>
+	</RightKeeperOnFloor>
+	<UpKeeperOnFloor>
+		<PieceImageAlternates>
+			<PieceImage size="96">
+				<Layer image="@drawable/green_ball_floor.png" />
+				<Layer image="@drawable/green_ball_keeper.png" />
+			</PieceImage>
+		</PieceImageAlternates>
+	</UpKeeperOnFloor>
+	<DownKeeperOnFloor>
+		<PieceImageAlternates>
+			<PieceImage size="96">
+				<Layer image="@drawable/green_ball_floor.png" />
+				<Layer image="@drawable/green_ball_keeper.png">
+					<Effect>
+						<UTurn />
+					</Effect>
+				</Layer>
+			</PieceImage>
+		</PieceImageAlternates>
+	</DownKeeperOnFloor>
+	<LeftKeeperOnDeadFloor>
+		<PieceImageAlternates>
+			<PieceImage size="96">
+				<Layer image="@drawable/green_ball_floor.png">
+					<Effect>
+						<BlendRgb red="0" green="0" blue="0" factor="0.1" />
+					</Effect>
+				</Layer>
+				<Layer image="@drawable/green_ball_keeper.png">
+					<Effect>
+						<RotateLeft />
+					</Effect>
+				</Layer>
+			</PieceImage>
+		</PieceImageAlternates>
+	</LeftKeeperOnDeadFloor>
+	<RightKeeperOnDeadFloor>
+		<PieceImageAlternates>
+			<PieceImage size="96">
+				<Layer image="@drawable/green_ball_floor.png">
+					<Effect>
+						<BlendRgb red="0" green="0" blue="0" factor="0.1" />
+					</Effect>
+				</Layer>
+				<Layer image="@drawable/green_ball_keeper.png">
+					<Effect>
+						<RotateRight />
+					</Effect>
+				</Layer>
+			</PieceImage>
+		</PieceImageAlternates>
+	</RightKeeperOnDeadFloor>
+	<UpKeeperOnDeadFloor>
+		<PieceImageAlternates>
+			<PieceImage size="96">
+				<Layer image="@drawable/green_ball_floor.png">
+					<Effect>
+						<BlendRgb red="0" green="0" blue="0" factor="0.1" />
+					</Effect>
+				</Layer>
+				<Layer image="@drawable/green_ball_keeper.png" />
+			</PieceImage>
+		</PieceImageAlternates>
+	</UpKeeperOnDeadFloor>
+	<DownKeeperOnDeadFloor>
+		<PieceImageAlternates>
+			<PieceImage size="96">
+				<Layer image="@drawable/green_ball_floor.png">
+					<Effect>
+						<BlendRgb red="0" green="0" blue="0" factor="0.1" />
+					</Effect>
+				</Layer>
+				<Layer image="@drawable/green_ball_keeper.png">
+					<Effect>
+						<UTurn />
+					</Effect>
+				</Layer>	
+			</PieceImage>
+		</PieceImageAlternates>
+	</DownKeeperOnDeadFloor>
+	<LeftKeeperOnGoal>
+		<PieceImageAlternates>
+			<PieceImage size="96">
+				<Layer image="@drawable/green_ball_floor.png" />
+				<Layer image="@drawable/green_ball_goal.png" />
+				<Layer image="@drawable/green_ball_keeper.png">
+					<Effect>
+						<RotateLeft />
+					</Effect>
+				</Layer>
+			</PieceImage>
+		</PieceImageAlternates>
+	</LeftKeeperOnGoal>
+	<RightKeeperOnGoal>
+		<PieceImageAlternates>
+			<PieceImage size="96">
+				<Layer image="@drawable/green_ball_floor.png" />
+				<Layer image="@drawable/green_ball_goal.png" />
+				<Layer image="@drawable/green_ball_keeper.png">
+					<Effect>
+						<RotateRight />
+					</Effect>
+				</Layer>
+			</PieceImage>
+		</PieceImageAlternates>
+	</RightKeeperOnGoal>
+	<UpKeeperOnGoal>
+		<PieceImageAlternates>
+			<PieceImage size="96">
+				<Layer image="@drawable/green_ball_floor.png" />
+				<Layer image="@drawable/green_ball_goal.png" />
+				<Layer image="@drawable/green_ball_keeper.png" />
+			</PieceImage>
+		</PieceImageAlternates>
+	</UpKeeperOnGoal>
+	<DownKeeperOnGoal>
+		<PieceImageAlternates>
+			<PieceImage size="96">
+				<Layer image="@drawable/green_ball_floor.png" />
+				<Layer image="@drawable/green_ball_goal.png" />
+				<Layer image="@drawable/green_ball_keeper.png">
+					<Effect>
+						<UTurn />
+					</Effect>
+				</Layer>
+			</PieceImage>
+		</PieceImageAlternates>
+	</DownKeeperOnGoal>
+	<LeftMovingKeeper>
+		<PieceImageAlternates>
+			<PieceImage size="96">
+				<Layer image="@drawable/green_ball_keeper.png">
+					<Effect>
+						<RotateLeft />
+					</Effect>
+				</Layer>
+			</PieceImage>
+		</PieceImageAlternates>
+	</LeftMovingKeeper>
+	<RightMovingKeeper>
+		<PieceImageAlternates>
+			<PieceImage size="96">
+				<Layer image="@drawable/green_ball_keeper.png">
+					<Effect>
+						<RotateRight />
+					</Effect>
+				</Layer>
+			</PieceImage>
+		</PieceImageAlternates>
+	</RightMovingKeeper>
+	<UpMovingKeeper>
+		<PieceImageAlternates>
+			<PieceImage size="96">
+				<Layer image="@drawable/green_ball_keeper.png" />
+			</PieceImage>
+		</PieceImageAlternates>
+	</UpMovingKeeper>
+	<DownMovingKeeper>
+		<PieceImageAlternates>
+			<PieceImage size="96">
+				<Layer image="@drawable/green_ball_keeper.png">
+					<Effect>
+						<UTurn />
+					</Effect>
+				</Layer>
+			</PieceImage>
+		</PieceImageAlternates>
+	</DownMovingKeeper>
+	<VirtualKeeper>
+		<PieceImageAlternates>
+			<PieceImage size="96">
+				<Layer image="@drawable/green_ball_virtual_keeper.png" />
+			</PieceImage>
+		</PieceImageAlternates>
+	</VirtualKeeper>
+	<GemOnFloor>
+		<PieceImageAlternates>
+			<PieceImage size="96">
+				<Layer image="@drawable/green_ball_floor.png" />
+				<Layer image="@drawable/green_ball_gem.png" />
+			</PieceImage>
+		</PieceImageAlternates>
+	</GemOnFloor>
+	<GemOnDeadFloor>
+		<PieceImageAlternates>
+			<PieceImage size="96">
+				<Layer image="@drawable/green_ball_floor.png">
+					<Effect>
+						<BlendRgb red="0" green="0" blue="0" factor="0.1" />
+					</Effect>
+				</Layer>
+				<Layer image="@drawable/green_ball_gem.png" />
+			</PieceImage>
+		</PieceImageAlternates>
+	</GemOnDeadFloor>
+	<GemOnGoal>
+		<PieceImageAlternates>
+			<PieceImage size="96">
+				<Layer image="@drawable/green_ball_floor.png" />
+				<Layer image="@drawable/green_ball_goal.png" />
+				<Layer image="@drawable/green_ball_gem.png" />
+			</PieceImage>
+		</PieceImageAlternates>
+	</GemOnGoal>
+	<MovingGem>
+		<PieceImageAlternates>
+			<PieceImage size="96">
+				<Layer image="@drawable/green_ball_gem.png" />
+			</PieceImage>
+		</PieceImageAlternates>
+	</MovingGem>
+	<Floor>
+		<PieceImageAlternates>
+			<PieceImage size="96">
+				<Layer image="@drawable/green_ball_floor.png" />
+			</PieceImage>
+		</PieceImageAlternates>
+	</Floor>
+	<DeadFloor>
+		<PieceImageAlternates>
+			<PieceImage size="96">
+				<Layer image="@drawable/green_ball_floor.png">
+					<Effect>
+						<BlendRgb red="0" green="0" blue="0" factor="0.1" />
+					</Effect>
+				</Layer>	
+			</PieceImage>
+		</PieceImageAlternates>
+	</DeadFloor>
+	<Goal>
+		<PieceImageAlternates>
+			<PieceImage size="96">
+				<Layer image="@drawable/green_ball_floor.png" />
+				<Layer image="@drawable/green_ball_goal.png" />
+			</PieceImage>
+		</PieceImageAlternates>
+	</Goal>
+	<LeftArrow>
+		<PieceImageAlternates>
+			<PieceImage size="128">
+				<Layer image="@drawable/common_arrow.png">
+					<Effect>
+						<RotateLeft />
+						<Move xoffset="1" />
+						&ArrowColor;
+					</Effect>
+				</Layer>
+			</PieceImage>		
+		</PieceImageAlternates>
+	</LeftArrow>
+	<RightArrow>
+		<PieceImageAlternates>
+			<PieceImage size="128">
+				<Layer image="@drawable/common_arrow.png">
+					<Effect>
+						<RotateLeft />
+						<HMirror />
+						&ArrowColor;
+					</Effect>
+				</Layer>
+			</PieceImage>		
+		</PieceImageAlternates>
+	</RightArrow>
+	<UpArrow>
+		<PieceImageAlternates>
+			<PieceImage size="128">
+				<Layer image="@drawable/common_arrow.png">
+					<Effect>
+						<Move yoffset="2" />
+						&ArrowColor;
+					</Effect>
+				</Layer>
+			</PieceImage>		
+		</PieceImageAlternates>
+	</UpArrow>
+	<DownArrow>
+		<PieceImageAlternates>
+			<PieceImage size="128">
+				<Layer image="@drawable/common_arrow.png">
+					<Effect>
+						<VMirror />
+						&ArrowColor;
+					</Effect>
+				</Layer>
+			</PieceImage>		
+		</PieceImageAlternates>
+	</DownArrow>
+	<Wall>
+		<WallPieceAlternates>
+			<PieceImage size="64">
+				<Layer image="@drawable/green_ball_floor.png">
+					<Effect>
+						<Scale width="64" height="64" />
+					</Effect>
+				</Layer>
+				<Layer image="@drawable/green_ball_wall1.png" />
+			</PieceImage>
+			<PieceImage size="64">
+				<Layer image="@drawable/green_ball_floor.png">
+					<Effect>
+						<Scale width="64" height="64" />
+					</Effect>
+				</Layer>
+				<Layer image="@drawable/green_ball_wall1.png">
+					<Effect>
+						<UTurn />
+					</Effect>
+				</Layer>
+			</PieceImage>
+			<PieceImage size="64">
+				<Layer image="@drawable/green_ball_floor.png">
+					<Effect>
+						<Scale width="64" height="64" />
+					</Effect>
+				</Layer>
+				<Layer image="@drawable/green_ball_wall2.png" />
+			</PieceImage>
+			<PieceImage size="64">
+				<Layer image="@drawable/green_ball_floor.png">
+					<Effect>
+						<Scale width="64" height="64" />
+					</Effect>
+				</Layer>
+				<Layer image="@drawable/green_ball_wall2.png">
+					<Effect>
+						<UTurn />
+					</Effect>
+				</Layer>
+			</PieceImage>
+			<PieceImage size="64">
+				<Layer image="@drawable/green_ball_floor.png">
+					<Effect>
+						<Scale width="64" height="64" />
+					</Effect>
+				</Layer>
+				<Layer image="@drawable/green_ball_wall3.png" />
+			</PieceImage>
+			<PieceImage size="64">
+				<Layer image="@drawable/green_ball_floor.png">
+					<Effect>
+						<Scale width="64" height="64" />
+					</Effect>
+				</Layer>
+				<Layer image="@drawable/green_ball_wall3.png">
+					<Effect>
+						<UTurn />
+					</Effect>
+				</Layer>
+			</PieceImage>
+			<PieceImage size="64">
+				<Layer image="@drawable/green_ball_floor.png">
+					<Effect>
+						<Scale width="64" height="64" />
+					</Effect>
+				</Layer>
+				<Layer image="@drawable/green_ball_wall4.png" />
+			</PieceImage>
+			<PieceImage size="64">
+				<Layer image="@drawable/green_ball_floor.png">
+					<Effect>
+						<Scale width="64" height="64" />
+					</Effect>
+				</Layer>
+				<Layer image="@drawable/green_ball_wall4.png">
+					<Effect>
+						<UTurn />
+					</Effect>
+				</Layer>
+			</PieceImage>
+		</WallPieceAlternates>
+	</Wall>
+	<Outside>
+	</Outside>
+</EasySokTheme>
