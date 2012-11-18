@@ -1,0 +1,72 @@
+Author: Evgeniy Grigoriev <grigr@yandex.ru>
+Homepage: http://grigr.narod.ru/sokoban.htm
+Copyright: (C) 2002
+Name: Grigr2002
+Info: This is a work in progress. For updates look at the
+Info: homepage of the collection.
+Difficulty: 5
+#####
+#   #########
+# $    ##   #
+##$#...     #
+## ##$#### ##
+#  ##..+ #  #
+#  $   # $  #
+#  ###$###  #
+#####      ##
+    #   ####
+    #####
+Title: Double choice
+ ########
+ #  #   ###
+##  $     #
+#   ##$#  #
+# $ #..# ##
+###$#..# #
+  #@$..  #
+  #$# #  #
+  #   ####
+  #####
+Title: Wake up
+  #########
+###  #    #
+#   *.* # #
+# * *@* # #
+# # .*. # #
+#  $ $ $  #
+##  #######
+ ####
+Title: Colobok
+######
+#    ####
+# # $   #
+#  *#*  #
+##$.@.$##
+#  *.*  #
+# # # # #
+#   #   #
+#########
+Title: Red sta
+ #########
+ #   #@  #
+ #   **#$##
+### #     #
+# $$**#.# #
+# # #  .  #
+#   ##.  ##
+##    .#$#
+ #  ##   #
+ #########
+Title: Kruchok
+  ####
+  #  ####
+ ##  $  ###
+ #  ##$.. #
+ # $@# .  #
+## #$$$# ##
+#  . #   #
+# .. ##  #
+###     ##
+  ####  #
+     ####
+Title: Anchor
